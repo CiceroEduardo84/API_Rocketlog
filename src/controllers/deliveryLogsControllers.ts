@@ -1,5 +1,5 @@
 import { prisma } from "@/database/prisma";
-import { AppError } from "@/utils/AppError";
+import { AppError } from "@/utils/appError";
 import { Request, Response } from "express";
 import { z } from "zod";
 

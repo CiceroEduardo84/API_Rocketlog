@@ -1,6 +1,6 @@
 import { authConfig } from "@/config/auth";
 import { prisma } from "@/database/prisma";
-import { AppError } from "@/utils/AppError";
+import { AppError } from "@/utils/appError";
 import { compare } from "bcrypt";
 import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
@@ -34,9 +34,9 @@ class SessionsController {
       expiresIn,
     });
 
-    const {password:hashedPassword, ...userWithoutPassword} = user
+    const { password: hashedPassword, ...userWithoutPassword } = user;
 
-    return response.json({token,  user: userWithoutPassword});
+    return response.json({ token, user: userWithoutPassword });
   }
 }
 
